@@ -1,0 +1,16 @@
+HelloTheWorld:
+    path:     /
+    defaults: { _controller: atefBlogBundle:Default:index }
+
+atef_first:
+    path:    /{id}/first.{_format}
+    defaults: { _controller: atefBlogBundle:Default:FirstPage, _format: html }
+    requirements:
+        _format: html
+        id: \d*
+
+atef_second:
+    path:    /second.{_format}
+    defaults: { _controller: atefBlogBundle:Default:SecondPage, _format: html }
+    requirements:
+        _format: html

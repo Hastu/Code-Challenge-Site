@@ -1,0 +1,4 @@
+atef_blog:
+    resource: "@atefBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

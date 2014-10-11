@@ -1,0 +1,97 @@
+{% extends '::accueil.html.twig' %}
+
+
+
+{% block member %}
+    <div id="member"> --- Welcome {{ user }} : <a href="{{ path ("fos_user_profile_show") }}">Profile</a> --- </div>
+{% endblock %}
+
+{% block timer %}
+    <div id="timer"> You still have : xx min -------
+        {% for i in 1..nbr_prob %}
+            {% set nom_prob = "probleme"~i %}
+        <a href="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': nom_prob, 'lang': lang }) }}">P{{ i }}</a> |
+        {% endfor %} -------
+       
+    </div>
+{% endblock %}
+{% block menu %}
+    <div id="menu">
+        <ul>                
+            <li><a id="nav_Home" href="{{ path ("code_challenge_homepage") }}#Challenges">Challenges<span class="m_w">Challenges</span><span class="m_r">Challenges</span></a></li>
+            <li><a id="nav_Challenges" href="{{ path ("code_challenge_homepage") }}">Home<span class="m_w">Home</span><span class="m_r">Home</span></a></li>
+            <li><a id="nav_Lessons" href="{{ path ("code_challenge_homepage") }}#Lessons">Lessons<span class="m_w">Lessons</span><span class="m_r">Lessons</span></a></li>
+            
+            <li><a id="nav_contact" href="{{ path ("code_challenge_homepage") }}#contact">Contact<span class="m_w">Contact</span><span class="m_r">Contact</span></a></li>
+        </ul>
+    </div>
+</div>
+</div><!-- end div #navbarHolder -->
+{% endblock %}
+
+
+
+{% block body %}
+
+    <style>
+        body{
+            background-color:#8C8D8E;
+        }
+    </style>
+
+    <!------------------------- CONTENT -->
+
+    <div id="container">
+        
+
+        <!------------------------- Home -->
+
+        <div id="Home">
+             <form action="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': prob, 'lang': lang }) }}" method="post">
+                 <div style="width:290px; height:405px; border:6px solid #E6E6E6; float:left; background-color:white"  ><div style="margin:10px 10px"> {{ problem.content|raw }} </div></div>
+            {% block code %} {% endblock %}
+            <div id="select" style="float:left; margin-left:10px; ">
+                    <select onchange="navigateTo(this, 'window', false);">
+                     <option value="" selected>{{ lang }}</option>
+                     <option value="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': prob, 'lang': 'shell' }) }}">shell</option>
+                     <option value="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': prob, 'lang': 'c' }) }}">c</option>
+                     <option value="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': prob, 'lang': 'cpp' }) }}">cpp</option>
+                     <option value="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': prob, 'lang': 'java' }) }}">java</option>
+                     <option value="{{ path ("code_challenge_challenge", { 'chall': chall, 'prob': prob, 'lang': 'python' }) }}">python</option>
+                    </select>
+
+                    <script type="text/javascript">
+                        function navigateTo(sel, target, newWindow) {
+                            var url = sel.options[sel.selectedIndex].value;
+                            if (newWindow) {
+                                window.open(url, target, '--- attributes here, see below ---');
+                            } else {
+                                window[target].location.href = url;
+                            }
+                        }
+                    </script>
+             </div>
+                    <input id="submit" type="submit" value="" style="margin-left:215px; width:25px; height:25px">Run
+                    <div style="width:926px; height:150px; border:6px solid #E6E6E6; background-color:white">
+                        <div style="margin:10px 10px;  min-height:80px; width:560px; float:left"> <strong>Votre Score pour ce Probleme est  :</strong> {{ score }}
+                         {% if result['0'] is defined  %}
+                             
+                   <br/><br/> {% for i in 0..nbr_test-1 %}
+                   <div style="float:left"><strong>test{{ i+1 }}:</strong>  {{ result[i] }}<string>|</strong> </div> 
+                              {% endfor %}  
+                         {% endif %}
+                        </div> 
+                        <div style="margin:10px 10px;  min-height:80px; width:320px; float:left">
+                            <strong> Important  :</strong> <br/>
+                            <p> -Vous devez compiler tout les  updates des codes de chaque probleme pour qu'il soit pris en considération</p>
+                         
+                        </div> 
+                    </div>
+            </form> 
+        </div><!-- end div #Home -->
+
+    </div><!-- end div #contact -->
+</div><!-- end div #container -->
+</div><!-- end div #wrapper -->
+
+{% endblock %}

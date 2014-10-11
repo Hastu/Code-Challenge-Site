@@ -1,0 +1,27 @@
+{% extends 'CodeChallengeSiteBundle::Default/challenge.html.twig' %}
+{% block code %}
+
+     <div style="width:600px; height:405px; float:right; margin-left:10px; border:6px solid white"> <textarea  name="code", id="cpp-code"  >
+{% if code.content is defined  %}
+            {{ code.content }}
+          {% else %}
+#include <stdio.h>
+ main()
+ { 
+ int a,b,n;
+ scanf("%d %d",&a,&b);
+ n=a+b;
+ printf("%d",n);
+ }
+{% endif %}
+                                        </textarea></div>
+
+                                        <script>
+                                            var cppEditor = CodeMirror.fromTextArea(document.getElementById("cpp-code"), {
+                                                lineNumbers: true,
+                                                matchBrackets: true,
+                                                mode: "text/x-c++src"
+                                            });
+                                        </script>
+
+                                    {% endblock %}

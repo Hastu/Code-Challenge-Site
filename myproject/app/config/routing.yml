@@ -1,0 +1,19 @@
+utilisateurs_utilisateurs:
+    resource: "@UtilisateursUtilisateursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+code_challenge_site:
+    resource: "@CodeChallengeSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sdz_blog:
+    resource: "@SdzBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog/
+
+ecomerce:
+    resource: "@EcomerceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+atef_blog:
+    resource: "@atefBlogBundle/Resources/config/routing.yml"
+    prefix:   /atef/
