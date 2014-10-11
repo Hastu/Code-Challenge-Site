@@ -1,0 +1,25 @@
+{% extends '::accueil.html.twig' %}
+
+{% block member %}<div id="member">  Ajout Problemes </div>{% endblock%}
+{% block timer %}{% endblock %}
+{% block menu %}
+    <div id="menu">
+        <ul>                  
+            <li><a id="nav_Home" href="#Home">Home<span class="m_w">Home</span><span class="m_r">Home</span></a></li>
+            <li><a id="nav_Lessons" href="#Lessons">Lessons<span class="m_w">Lessons</span><span class="m_r">Lessons</span></a></li>
+            <li><a id="nav_Challenges" href="#Challenges">Challenges<span class="m_w">Challenges</span><span class="m_r">Challenges</span></a></li>
+            <li><a id="nav_contact" href="#contact">Contact<span class="m_w">Contact</span><span class="m_r">Contact</span></a></li>
+        </ul>
+    </div>
+</div>
+</div><!-- end div #navbarHolder -->
+{% endblock %}  
+
+{% block body %}
+    <div id="Home">
+        <form action="{{path ('prob_ajout', {'prob': prob})}}" method="post">
+        {{ form_rest(form)  }}
+        </form>
+    </div>
+{% endblock %}
+

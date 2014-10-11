@@ -1,0 +1,7 @@
+parameters:
+#    ecomerce.example.class: Ecomerce\EcomerceBundle\Example
+
+services:
+#    ecomerce.example:
+#        class: %ecomerce.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

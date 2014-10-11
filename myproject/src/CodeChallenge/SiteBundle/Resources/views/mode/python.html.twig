@@ -1,0 +1,28 @@
+{% extends 'CodeChallengeSiteBundle::Default/challenge.html.twig' %}
+{% block code %}
+
+     <div style="width:600px; height:405px; float:right; margin-left:10px; border:6px solid white"> <textarea  name="code", id="python-code"   >
+{% if code.content is defined  %}
+            {{ code.content }}
+          {% else %}
+#! /usr/bin/python
+ a=int (input())
+ print a
+
+
+{% endif %}
+</textarea></div>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("python-code"), {
+        mode: {name: "python",
+               version: 2,
+               singleLineStringErrors: true},
+        lineNumbers: true,
+        indentUnit: 4,
+        matchBrackets: true
+    });
+    editor.autoFormatRange(range.from, range.to);
+   
+    </script>
+
+                                    {% endblock %}

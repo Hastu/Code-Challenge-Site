@@ -1,0 +1,48 @@
+{% extends '::accueil.html.twig' %}
+
+
+
+{% block member %}
+    <div id="member"> --- Welcome {{ user }} : <a href="{{ path ("fos_user_profile_show") }}">Profile</a> --- </div>
+{% endblock %}
+{% block menu %}
+    <div id="menu">
+        <ul>                
+            <li><a id="nav_Home" href="{{ path ("code_challenge_homepage") }}#Challenges">Challenges<span class="m_w">Challenges</span><span class="m_r">Challenges</span></a></li>
+            <li><a id="nav_Challenges" href="{{ path ("code_challenge_homepage") }}">Home<span class="m_w">Home</span><span class="m_r">Home</span></a></li>
+            <li><a id="nav_Lessons" href="{{ path ("code_challenge_homepage") }}#Lessons">Lessons<span class="m_w">Lessons</span><span class="m_r">Lessons</span></a></li>
+
+            <li><a id="nav_contact" href="{{ path ("code_challenge_homepage") }}#contact">Contact<span class="m_w">Contact</span><span class="m_r">Contact</span></a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+{% block body %}
+
+    <style>
+        #Home{
+            min-height: 500px;
+        }
+        #Home li{
+            margin-left: 100px;
+        }
+    </style>
+    <div id="Home">
+        <html>
+            <body>
+                <p><strong>classement:</strong></p>
+                <br/>
+                <ul>
+                    {% for user in list %}
+                        <li><strong>{{ user.user }}</strong> ------- {{ user.score }} ------- {{ user.time|date('Y-m-d H:i:s') }}</li>
+                            {% else %}
+                            <li>Pas de classement trouvé</li>
+                                {% endfor %}
+                            </ul>
+                            
+
+
+                        </body>
+                    </html>
+                </div>
+                {% endblock %}

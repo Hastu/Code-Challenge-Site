@@ -1,0 +1,48 @@
+{% extends '::accueil.html.twig' %}
+{% block body %}
+{% block member %}
+<div id="member"> ---Welcome in OSSEC Coding Site : <a href="{{ path ("fos_user_registration_register") }}">Sign in</a>/<a href="{{ path ("fos_user_security_login") }}">Login</a>--- </div>
+{% endblock %}
+{% block menu %}
+				<div id="menu">
+                        <ul>                  
+                            <li><a id="nav_Home" href="index.html#Home">Home<span class="m_w">Home</span><span class="m_r">Home</span></a></li>
+                            <li><a id="nav_Lessons" href="index.html#Lessons">Lessons<span class="m_w">Lessons</span><span class="m_r">Lessons</span></a></li>
+                            <li><a id="nav_Challenges" href="index.html#Challenges">Challenges<span class="m_w">Challenges</span><span class="m_r">Challenges</span></a></li>
+                            <li><a id="nav_contact" href="index.html#contact">Contact<span class="m_w">Contact</span><span class="m_r">Contact</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end div #navbarHolder -->
+{% endblock %}
+<div  id="Home" style="text-align:center">
+    <div>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <a href="{{ path('fos_user_security_logout') }}">
+                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+            </a>
+        {% else %}
+            <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+        {% endif %}
+    </div>
+{% if is_granted('ROLE_AUTEUR') %}
+<a href="{{ path('administration') }}">Ajouter un article</a>
+{% endif %}
+
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="flash-{{ type }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div style="width:500px; margin:auto ">
+        <br>
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    </div>
+</div>
+{% endblock %}
+

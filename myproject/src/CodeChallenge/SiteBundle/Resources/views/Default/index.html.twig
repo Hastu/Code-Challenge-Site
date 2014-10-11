@@ -1,0 +1,271 @@
+{% extends '::accueil.html.twig' %}
+
+{% block member %}
+
+    {% if user is not empty  %}
+    <div id="member"> --- Welcome {{ user }} in OSSEC Coding Site : <a href="{{ path ("fos_user_profile_show") }}">Profile</a> --- </div>   
+    {% else %}
+    <div id="member"> ---Welcome in OSSEC Coding Site : <a href="{{ path ("fos_user_registration_register") }}">Sign in</a>/<a href="{{ path ("fos_user_security_login") }}">Login</a>--- </div>
+    {% endif %}
+{% endblock %}
+
+{% block menu %}
+				<div id="menu">
+                        <ul>                  
+                            <li><a id="nav_Home" href="#Home">Home<span class="m_w">Home</span><span class="m_r">Home</span></a></li>
+                            <li><a id="nav_Lessons" href="#Lessons">Lessons<span class="m_w">Lessons</span><span class="m_r">Lessons</span></a></li>
+                            <li><a id="nav_Challenges" href="#Challenges">Challenges<span class="m_w">Challenges</span><span class="m_r">Challenges</span></a></li>
+                            <li><a id="nav_contact" href="#contact">Contact<span class="m_w">Contact</span><span class="m_r">Contact</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end div #navbarHolder -->
+{% endblock %}
+
+{% block body %}
+ <!------------------------- CONTENT -->
+
+            <div id="container">
+                <div id="logo" title="Code Challenge" class="site-message-absolute">
+                    <div class="nav_logo_w"></div>
+                </div>
+
+                <!------------------------- Home -->
+
+                <div id="Home">
+                    <a id="logo_big" title="John Doe" href="index.html"></a>
+                    <div id="headline" class="left grid">
+                        <h1>Coding Site</h1>
+                        <h2><span>Challenge programmation web</span><br /><a href="mailto:youremail@yourdomain.com">contact@ossec.tn</a></h2>
+                    </div>
+                    <div id="Home_pict" class="grid"><img src="{{ asset ('images/my_picture.jpg') }}" alt="Mihai Balea | Portfolio" /></div>
+                    <div class="clear">&nbsp;</div>
+                    <div class="left grid"></div>
+                    <div class="left grid Home_text">
+                        <p>
+                          Plateform de programmation dédié pour des challenges de developpement en langage c,c++,pyhton, java .....
+                        </p>
+                    </div>
+                    <div class="right grid Home_text">
+                        <p>
+                            text text text text text text text text text text  text text text text text  text text text text text  text text text text text  text text text text text 
+                            <ul>
+                                <li><strong>text</strong></li>
+                                <li><strong>text</strong></li>
+                                <li><strong>text</strong></li>
+                                <li><strong>text</strong></li>
+                                <li><strong>text</strong></li>
+                                <li><strong>text</strong></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </div><!-- end div #Home -->
+
+                <div class="clear"></div>
+
+                <!------------------------- Lessons -->
+
+                <div id="Lessons">
+                    <h2>Lessons.</h2>
+                    <div class="ChallengesContainer">
+                        <div id="project" class="item_details">
+                            <div class="slide_inner"></div>
+                            <div class="next_slide">&nbsp;</div>
+                            <div class="prev_slide">&nbsp;</div>
+                            <!-- Lessons 1 -->
+                            <div class="prjinfo" id="iit_1">
+                                <div class="item_slider">
+                                    <ul>
+                                        <li class="iit_1 pic selected"><img src="{{ asset ('images/Challenges/slide_w1_1.jpg') }}" alt="My Lessons 1" /></li>
+                                        <li class="iit_1 pic"><img src="{{ asset ('images/Challenges/slide_w1_1.jpg') }}" alt="My Lessons 1" /></li>
+                                        <li class="iit_1 pic"><img src="{{ asset ('images/Challenges/slide_w1_1.jpg') }}" alt="My Lessons 1" /></li>
+                                    </ul> 
+                                </div>
+                                <div class="item_text">
+                                    <h3><a href="{{ path ("code_challenge_lessons") }}">My Lessons 1</a></h3>
+                                    <div class="clear"></div>
+                                    <h4>Overview:</h4>
+                                    <div class="clear"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit.</p>
+                                    <h4>My Contribution:</h4>
+                                    <ul>
+                                        <li>User Interface Design</li>
+                                        <li>HTML/CSS</li>
+                                        <li>Drupal 7 - Content Management</li>
+                                    </ul>
+                                    <h5>Year: <span>2011</span></h5>
+                                    <h5>Client: <span>Client Name</span></h5>
+                                    <a href="http://www.templatesbook.com" title="My Lessons 1" target="_blank" class="btn_see_it_live">See it live</a>
+                                    <div class="close_item_info">&nbsp;</div>
+                                </div>
+                            </div><!-- end div #iit_1 -->
+                            <!-- Lessons 2 -->
+                            <div class="prjinfo" id="iit_2">
+                                <div class="item_slider">
+                                    <ul>
+                                        <li class="iit_2 pic selected"><img src="{{ asset ('images/Challenges/slide_w1_1.jpg') }}" alt="My Lessons 2" /></li>
+                                        <li class="iit_2 pic"><img src="{{ asset ('images/Challenges/slide_w1_1.jpg') }}" alt="My Lessons 2" /></li>
+                                    </ul> 
+                                </div>
+                                <div class="item_text">
+                                    <h3>My Lessons 2</h3>
+                                    <div class="clear"></div>
+                                    <h4>Overview:</h4>
+                                    <div class="clear"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit. Fusce suscipit auctor urna quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis volutpat felis quis suscipit.
+                                    </p>
+                                    <h4>My Contribution:</h4>
+                                    <ul>
+                                        <li>User Interface Design</li>
+                                        <li>HTML/CSS</li>
+                                        <li>Wordpress - Content Management</li>
+                                    </ul>
+                                    <h5>Year: <span>2010</span></h5>
+                                    <h5>Client: <span>Client name</span></h5>
+                                    <a href="http://www.templatesbook.com" title="My Lessons 2" target="_blank" class="btn_see_it_live">See it live</a>
+                                    <div class="close_item_info">&nbsp;</div>
+
+                                </div>
+                            </div><!-- end div #iit_2 -->
+                           
+                        </div><!-- end div #project -->
+
+                        <!-- LessonsS GRID -->
+
+                        <div class="prjGrid">
+                            <div id="it_1" class="item" >
+                                <img src="{{ asset ('images/Challenges/thumb_w1.jpg') }}" alt="My Lessons 1" />
+                                <span class="hover">
+                                    <span class='h3'>My Lessons 1</span>
+                                </span>
+                            </div>
+                            <div id="it_2" class="item">
+                                <img src="{{ asset ('images/Challenges/thumb_w1.jpg') }}" alt="My Lessons 2" />
+                                <span class="hover">
+                                    <span class='h3'>My Lessons 2</span>
+                                </span>
+                            </div>
+                           
+                        </div><!-- end div .prjGrid -->
+
+                    </div><!-- end div .ChallengesContainer -->
+                    <div class="clear"></div>  
+                </div><!-- end div #Lessons -->
+                <div class="clear"></div>
+
+                <!------------------------- Challenges -->
+
+                <div id="Challenges">
+                    <h2>Challenges.</h2>
+                    <div class="ChallengesContainer">
+                        <!-- PROJECT 1 -->
+                        <div class="pprj">
+                            <div class="grid left">
+                                <div class="item">
+                                    <img src="{{ asset ('images/Challenges/thumb_p1.jpg') }}" alt="{{ listchallenges['0'].nom }}" />
+                                    <a class="hover" href="{{ path ("code_challenge_challenge", { 'chall': listchallenges['0'].nom, 'prob': 'probleme1', 'lang': 'c' }) }}" title="{{ listchallenges['0'].nom }}"><span class='h3'> {{ listchallenges['0'].nom }}</span></a>
+                                </div>    
+                            </div>
+                            <div class="item_text">
+                                <h3> {{ listchallenges['0'].nom }}</h3>
+                                <div class="clear"></div>
+                                <h4>Date Debut :  {{ listchallenges['0'].dateDebut|date('Y-m-d H:i:s') }}</h4>
+                                <ul>
+                                    <li>Languages :  {{ listchallenges['0'].language }}</li>
+                                    <li>Nombre de Problemes :  {{ listchallenges['0'].nbrProblems }}</li>
+                                    <li>Durée :  {{ listchallenges['0'].duree }}</li>
+                                   
+                                </ul>
+                 
+                            </div>
+                            
+                        </div><!-- end div .pprj -->
+                        <!-- PROJECT 2 -->
+                        <div class="pprj">
+                            <div class="grid left">
+                                <div class="item">
+                                    <img src="{{ asset ('images/Challenges/thumb_p1.jpg') }}" alt="{{ listchallenges['1'].nom }}" />
+                                    <a class="hover" href="{{ path ("code_challenge_challenge", { 'chall': listchallenges['1'].nom, 'prob': 'probleme1', 'lang': 'c' }) }}" title="{{ listchallenges['1'].nom }}" ><span class='h3'>{{ listchallenges['1'].nom }}</span></a>
+                                </div>    
+                            </div>
+                            <div class="item_text">
+                                <h3> {{ listchallenges['1'].nom }}</h3>
+                                <div class="clear"></div>
+                                <h4>Date Debut :  {{ listchallenges['1'].dateDebut|date('Y-m-d H:i:s') }}</h4>
+                                <ul>
+                                    <li>Languages :  {{ listchallenges['1'].language }}</li>
+                                    <li>Nombre de Problemes :  {{ listchallenges['1'].nbrProblems }}</li>
+                                    <li>Durée :  {{ listchallenges['1'].duree }}</li>
+                                   
+                                </ul>
+                 
+                            </div>
+                            
+                        </div><!-- end div .pprj -->
+                    </div><!-- end div .ChallengesContainer -->
+                    <div class="clear"></div>
+                    <p style="text-align:right"> <a href="{{path ('allchallenges')}}" >All challenges</a></p>
+                </div><!-- end div #Challenges -->
+
+                <div class="clear"></div>
+                <!------------------------- CONTACT -->
+                <div id="contact">
+                    <h2>Contact.</h2>
+                    <div class="clear"></div>
+                    <div class="contactContainer">
+                        <h3>Get in touch:</h3>
+                        <div class="contact">
+                            <form action="#" method="post" id="contactForm">
+                                <ul>
+                                    <li>
+                                        <label for="name">Name:</label>
+                                        <input type="text" name="name" value="" id="name" />
+                                    </li>
+                                    <li>
+                                        <label for="email">Email:</label>
+                                        <input type="text" name="email" value="" id="email" />
+                                    </li>
+                                    <li>
+                                        <label for="tele">Telephone:</label>
+                                        <input type="text" name="tele" value="" id="tele" />
+                                    </li>
+                                    <li class="special" style="display: none;">
+                                        <label for="last">Don't fill this in:</label>
+                                        <input type="text" name="last" value="" id="last" />
+                                    </li>
+                                    <li>
+                                        <label for="message">Message:</label><textarea rows="5" name="message"></textarea>
+                                    </li>
+                                    <li class="submitbutton">
+                                        <input type="submit" class="btn" value="Send Message" />
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="message"><div id="alert"></div></div>
+                    </div><!-- end div .contactContainer -->
+                    <div class="contact_social grid">
+                        <span><span class="address">&nbsp;</span>1324 Lorem St, Lorem, Vestibulum</span>
+                        <div class="clear"></div>
+                        <span><span class="phone">&nbsp;</span>1234 456 789</span>
+                        <div class="clear"></div>
+                        <span><span class="email">&nbsp;</span>contact@mihaibalea.info</span>
+                        <div class="clear"></div>
+                        <a href="http://www.facebook.com/templatesbook" class="facebook"></a>
+                        <div class="clear"></div>
+                        <a href="http://www.twitter.com/bomasmd" class="twitter"></a>
+                        <div class="clear"></div>
+                        <a href="#" class="linkedin"></a>
+                        <div class="clear"></div>
+                        <a href="#" class="gmail"></a>
+                    </div><!-- end div .contact_social -->
+                    <div class="clear"></div>
+
+
+                    <div id="btn_top"></div> 
+                </div><!-- end div #contact -->
+            </div><!-- end div #container -->
+        </div><!-- end div #wrapper -->
+
+{% endblock %}
