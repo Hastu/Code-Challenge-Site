@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Entity/Codes.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/mode/java.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/TimeController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/mode/cpp.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/ClassementController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/LessonController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/mode/shell.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/mode/python.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/main.c</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/compile_cpp.sh</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/ChallengeController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/Resources/views/accueil.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/Default/challenge.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/main.cpp</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/compile_c.sh</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Form/TestAjoutType.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/TestController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/mode/c.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Entity/Tests.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/compile_py.sh</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Form/ProblemeAjoutType.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Form/ChallengeAjoutType.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/DefaultController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/config/parameters.yml.dist</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/config/parameters.yml</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/config/security.yml</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/ContactController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Form/ContactType.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/config/config.yml</file>
+            <file>file:/opt/lampp/htdocs/myproject/app/Resources/FOSUserBundle/views/Profile/show.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Entity/Score.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/compile_sh.sh</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/administration/admin.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/process.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/config/routing.yml</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/main_java.java</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Controller/AdminController.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Entity/Problems.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Entity/Challenges.php</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/administration/prob_ajout.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/src/CodeChallenge/SiteBundle/Resources/views/administration/test_ajout.html.twig</file>
+            <file>file:/opt/lampp/htdocs/myproject/web/compile_java.sh</file>
+        </group>
+    </open-files>
+</project-private>

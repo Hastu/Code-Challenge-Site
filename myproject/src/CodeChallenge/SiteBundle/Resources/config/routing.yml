@@ -1,0 +1,40 @@
+administration:
+    pattern: /admin_challenge
+    defaults: { _controller: CodeChallengeSiteBundle:Admin:admin }
+
+prob_ajout:
+    pattern: /admin_challenge/{prob}
+    defaults: { _controller: CodeChallengeSiteBundle:Admin:prob }
+    
+    
+test_ajout:
+    pattern: /admin_challenge/{prob}/{test}
+    defaults: { _controller: CodeChallengeSiteBundle:Admin:test }
+
+code_challenge_homepage:
+    pattern:  /
+    defaults: { _controller: CodeChallengeSiteBundle:Default:index }
+ 
+code_challenge_challenge:
+    pattern:  /{chall}/{prob}/{lang}
+    defaults: { _controller: CodeChallengeSiteBundle:Challenge:challenge, lang: shell }
+
+attente:
+    pattern:  /time
+    defaults: { _controller: CodeChallengeSiteBundle:Time:time}
+    
+classement:
+    pattern:  /classement
+    defaults: { _controller: CodeChallengeSiteBundle:Classement:classement}
+    
+code_challenge_lessons:
+    pattern:  /lessons
+    defaults: { _controller: CodeChallengeSiteBundle:Default:lessons }
+
+code_challenge_textarea:
+    pattern:  /test
+    defaults: { _controller: CodeChallengeSiteBundle:Challengeform:challengeform }
+    
+allchallenges:
+    pattern:  /allchallenges
+    defaults: { _controller: CodeChallengeSiteBundle:Default:allchallenges }

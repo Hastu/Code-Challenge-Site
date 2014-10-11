@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"> 
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Lang" content="en"/>
+        <meta name="Ossec" content="Ossec team"/>
+
+
+        <title>OSSEC | Coding Site</title>
+        {% block stylesheet %}
+            <link href="{{ asset('favicon.png')}}" type="image/gif" rel="icon" type="text/css"/>  
+            <link id="mainCSS" rel="stylesheet" href="{{ asset ('css/style.css') }}" type="text/css"/>
+            <link id="mainCSS" rel="stylesheet"  href="{{ asset ('css/skins.css') }}"/>
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/skin.css') }}" />
+            <link rel=stylesheet href="{{ asset("css/docs.css") }}"  type="text/css"/>
+                <link rel="stylesheet" href="{{ asset("css/codemirror.css") }}"  type="text/css"/>
+        {% endblock %}
+        {% block javascript %}
+          <script charset="utf-8" type="text/javascript" src="{{ asset ('js/jquery.1.4.2.min.js') }}"></script>
+                    <script type= "text/javascript" src="{{ asset('js/queryLoader.js') }}" ></script>
+                    <script type="text/javascript" src="{{ asset('js/jquery.backgroundposition.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('js/jquery.smooth-scroll.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('js/sp.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('js/js.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('js/skins.js') }}"></script>
+                    <script type= "text/javascript" src="{{ asset("js/codemirror.js") }}"></script>
+                    <script type= "text/javascript" src="{{ asset("js/matchbrackets.js") }}"></script>
+                    <script type= "text/javascript" src="{{ asset("js/clike.js") }}"></script>
+                    <script type= "text/javascript" src="{{ asset("js/python.js") }}"></script>
+                    <script type= "text/javascript" src="{{ asset("js/shell.js") }}"></script>
+        {% endblock %}
+    </head>
+
+    <body id="body_pat" class="red">
+        <div id="wrapper">
+
+            <!------------------------- NAVIGATION -->
+
+            <div id="navbarHolder">
+                <div id="navbar">
+                    {% block member %}{% endblock%}
+            {% block timer %}{% endblock %}
+        {% block menu %}{% endblock %}
+    {% block body %}{% endblock %}
+    <br><br> <br> <br><hr> <p  style="margin-top: 30px; text-align:center" >@Copyright 2014-2015 <a href="http://www.tempaltesbook.com">OSSEC</a> | Developed&Designed by <a href="http://www.mihaibalea.info">Arfaoui Atef | Abdelli Haithem</a></p>
+        <script type='text/javascript'>
+            QueryLoader.init();
+        </script>
+
+        </body>
+        </html>

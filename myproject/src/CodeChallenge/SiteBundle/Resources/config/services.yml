@@ -1,0 +1,7 @@
+parameters:
+#    code_challenge_site.example.class: CodeChallenge\SiteBundle\Example
+
+services:
+#    code_challenge_site.example:
+#        class: %code_challenge_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

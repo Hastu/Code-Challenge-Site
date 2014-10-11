@@ -1,0 +1,14 @@
+<?php
+
+namespace atef\BlogBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class DefaultController extends Controller
+{
+    public function indexAction($nom,$prenom)
+    {
+        return $this->render('atefBlogBundle:Default:index.html.twig', array('nom' => $nom,
+									    'prenom' =$prenom));
+    }
+}

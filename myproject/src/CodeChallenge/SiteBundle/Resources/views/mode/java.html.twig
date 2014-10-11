@@ -1,0 +1,31 @@
+{% extends 'CodeChallengeSiteBundle::Default/challenge.html.twig' %}
+{% block code %}
+
+     <div style="width:600px; height:405px; float:right; margin-left:10px; border:6px solid white"> <textarea  name="code", id="java-code"  >
+        {% if code.content is defined  %}
+            {{ code.content|raw }}
+          {% else %}
+import java.util.*;
+public class main_java
+{ 
+  public static void main(String[] args)
+  	{ Scanner sc = new Scanner(System.in);
+     int i1= sc.nextInt();
+     int i2= sc.nextInt();
+     int i = i1+i2;
+     System.out.println(i);
+    }
+}             
+{% endif %}
+                        </textarea></div>
+
+                        <script>
+                            var javaEditor = CodeMirror.fromTextArea(document.getElementById("java-code"), {
+                                lineNumbers: true,
+                                matchBrackets: true,
+                                mode: "text/x-java"
+                            });
+                        </script>
+
+
+                    {% endblock %}
