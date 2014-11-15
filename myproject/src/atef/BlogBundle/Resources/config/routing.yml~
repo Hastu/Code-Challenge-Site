@@ -1,3 +1,0 @@
-HelloTheWorld:
-    path:     /hello/(nom)/(prenom)
-    defaults: { _controller: atefBlogBundle:Default:index }
