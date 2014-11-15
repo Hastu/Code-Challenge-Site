@@ -1,3 +1,0 @@
-ecomerce_homepage:
-    path:     /hello-world
-    defaults: { _controller: EcomerceBundle:Blog:index }
